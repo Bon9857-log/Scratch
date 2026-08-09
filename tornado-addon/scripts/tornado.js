@@ -62,12 +62,13 @@ system.runInterval(() => {
 }, 1);
 
 // Give the Tornado Rod to everyone by running:  /scriptevent tornado:give
+// (minecraft:item_name must be an object in 1.21.30+ / 1.26)
 system.beforeEvents.scriptEventReceive.subscribe((event) => {
   if (event.id !== "tornado:give") return;
   for (const player of world.getAllPlayers()) {
     try {
       player.runCommandAsync(
-        'give @s blaze_rod 1 0 {"minecraft:item_name":"\\"Tornado Rod\\"","minecraft:keep_on_death":{}}'
+        'give @s blaze_rod 1 0 {"minecraft:item_name":{"value":"Tornado Rod"},"minecraft:keep_on_death":{}}'
       );
     } catch (e) { /* ignore */ }
   }
