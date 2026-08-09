@@ -1,0 +1,25 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Tornado Rod Add-On",
+    "description": "Spawns a giant rotating tornado around any player holding the Tornado Rod. No command blocks required.",
+    "uuid": "99306cd0-c403-481f-9c52-e9d67bea7e20",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "5728de58-3287-4b8c-bc00-a11f9153563c",
+      "version": [1, 0, 0],
+      "entry": "scripts/tornado.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.21.0"
+    }
+  ]
+}
